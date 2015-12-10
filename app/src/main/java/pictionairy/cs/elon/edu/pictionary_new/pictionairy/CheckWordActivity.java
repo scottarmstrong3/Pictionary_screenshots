@@ -67,6 +67,7 @@ public class CheckWordActivity extends Activity {
                 .setCancelable(false)
                 .setPositiveButton("YOU WAS MOTHERFUCKING RIGHT", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        sendIntent();
                         //start next activity
                     }
                 });
@@ -79,18 +80,24 @@ public class CheckWordActivity extends Activity {
 
         builder.setMessage("YOU FUCKED UP " )
                 .setCancelable(false)
-                .setPositiveButton("YOU WAS MOTHERFUCKING RIGHT", new DialogInterface.OnClickListener() {
+                .setPositiveButton("YOU WAS MOTHERFUCKING WRONG", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-
+                        sendIntent();
                         //start next activity
                     }
                 });
         AlertDialog alert = builder.create();
         alert.show();
     }
+    private void sendIntent(){
+        Intent intent = new Intent(this, Player2Word.class);
+        intent.putExtra("player1Name", player1Name);
+        intent.putExtra("player2Name", player1Name);
+        startActivity(intent);
+    }
     public void check(View view) {
-        Intent intent = new Intent(this, CheckWordActivity.class);
-        EditText editText = (EditText) findViewById(R.id.player2_name);
+
+        EditText editText = (EditText) findViewById(R.id.player2_enter_word);
         String input = editText.getText().toString();
         if(input.equalsIgnoreCase(player1Word)){
             showCorrectDialog();
@@ -99,7 +106,7 @@ public class CheckWordActivity extends Activity {
         else{
             showWrongDialog();
         }
-        startActivity(intent);
+
     }
 
 

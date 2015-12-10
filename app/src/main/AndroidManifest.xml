@@ -33,7 +33,8 @@
         </activity>
         <activity
             android:name=".DrawingActivity"
-            android:label="@string/title_activity_drawing" >
+            android:label="@string/title_activity_drawing"
+            android:theme="@style/Theme.Project.ActivityDrawing">
         </activity>
         <activity
             android:name=".SetWidthDialogActivity"

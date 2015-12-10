@@ -6,12 +6,16 @@
         android:id="@+id/action_setwidth"
         android:title="@string/action_setwidth"
         android:orderInCategory="100"
-        android:showAsAction="never" />
+        android:showAsAction="always"
+        tools:ignore="AppCompatResource"
+        />
     <item
         android:id="@+id/action_setcolor"
         android:title="Set Color"
         android:orderInCategory="100"
-        android:showAsAction="never" />
+        android:showAsAction="always"
+        tools:ignore="AppCompatResource"
+        />
 
 </menu>
     <!-- From: file:/Users/emccarthy3/Downloads/Pictionairy2-master/app/src/main/res/menu/menu_drawing.xml -->

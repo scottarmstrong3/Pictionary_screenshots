@@ -20,11 +20,11 @@ public class Player2Word extends Activity {
     private Words words;
     private String player2Name;
     private String player1Name;
-    private String player1Word;
+    private String player2Word;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_player1_word);
+        setContentView(R.layout.activity_player2_word);
         Bundle extras = getIntent().getExtras();
 
         player1Name = extras.getString("name1");
@@ -32,20 +32,20 @@ public class Player2Word extends Activity {
 
         words = new Words(getBaseContext());
 
-        TextView editText = (TextView) findViewById(R.id.player2_get_word);
+        TextView editText = (TextView) findViewById(R.id.player2_set_name);
         editText.setText(player2Name);
 
-        TextView player1WordText =  (TextView)findViewById(R.id.player1_set_word);
-        player1WordText.setText(words.getWord());
-        player1Word = (String)player1WordText.getText();
-        System.out.println(player1Word);
+        TextView player2WordText =  (TextView)findViewById(R.id.player2_set_word);
+        player2WordText.setText(words.getWord());
+        player2Word = (String)player2WordText.getText();
+        System.out.println(player2Word);
     }
 
     public void startDraw(View view) {
         Intent intent = new Intent(this, DrawingActivity.class);
         intent.putExtra("name1", player1Name);
         intent.putExtra("name2", player2Name);
-        intent.putExtra("player1Word", player1Word);
+        intent.putExtra("player2Word", player2Word);
         startActivity(intent);
     }
     @Override

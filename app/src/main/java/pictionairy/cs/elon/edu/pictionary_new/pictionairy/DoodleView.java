@@ -24,7 +24,7 @@ public class DoodleView extends View {
     private Canvas canvas;
     private Paint paint;
     public final static int DEFAULT_WIDTH = 25;
-    public final static int DEFAULT_RED = 125;
+    public final static int DEFAULT_RED = 200;
     public final static int DEFAULT_ALPHA = 255;
     public final static int DEFAULT_GREEN = 25;
     public final static int DEFAULT_BLUE = 25;
