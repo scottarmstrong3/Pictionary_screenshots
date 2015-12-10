@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="edu.elon.cs.pictionairy.NameActivity">
+
+    <TextView android:text="Enter your name Player 2:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name1"
+        android:width="200dp"
+        android:textSize="40dp"
+        android:textStyle="bold|italic"
+        android:textColor="#64FE2E"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/player2_name"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:width="250dp"
+        android:textColor="#64FE2E"
+        android:textStyle="bold|italic"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:paddingLeft="30dp"
+        android:hint="Enter your name here"
+        android:textColorHint="#64FE2E"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Game"
+        android:id="@+id/startgamebutton"
+        android:textColor="#64FE2E"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:textStyle="bold|italic"
+        android:onClick="startGame"/>
+
+</RelativeLayout>

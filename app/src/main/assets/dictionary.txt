@@ -1,0 +1,14 @@
+house
+apple
+Betsey
+Colin
+Android marshmallow
+Android KitKat
+Android Lollipop
+Android Jellybean
+Android GingerBread
+cloud
+puppy
+kitten
+Mickey Mouse
+Minnie Mouse
